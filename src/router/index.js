@@ -1,37 +1,38 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import home from '@/views/home';
-
+import home from '@/views/index';
+import login from '@/views/login';
+import Cookies from "js-cookie";
 Vue.use(Router)
 
 const router = new Router({
     routes: [
         {
-            path: '/',
-            redirect: '/page1'
+            path: '',
+            redirect: 'login',
         },
         {
-            path: '',
-            name: 'home',
+            path: '/login',
+            component: login, 
+        },
+        {
+            path: '/home',
+            name: '/home',
             component: home,
-            children: [
-                {
-                    path: '/page1',
-                    name: 'page1',
-                    component: () => import('@/views/page1')
-                },
-                {
-                    path: '/page2',
-                    name: 'page2',
-                    component: () => import('@/views/page2')
-                },
-                {
-                    path: '/page3',
-                    name: 'page3',
-                    component: () => import('@/views/page3')
-                }
-            ]
         }
     ]
 })
 export default router
+
+router.beforeEach((to, from, next) => {
+    if (Cookies.get("token")) {
+        next()
+    } else {    
+      if (to.path === "/login") {
+        next()
+      } else {
+        next('/login')
+      }
+    }
+  })
+  

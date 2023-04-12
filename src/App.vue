@@ -46,10 +46,12 @@ html {
 body {
     transform-origin: left top;
     background-size: 100% 100%;
+    overflow-x:hidden;
+        overflow-y:hidden;
 }
 #app {
     height: 100%;
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-family: 'SourceHanSansCN-Bold', 'SourceHanSansCN-ExtraLight', 'SourceHanSansCN-Heavy', 'SourceHanSansCN-Light','SourceHanSansCN-Medium','SourceHanSansCN-Normal','SourceHanSansCN-Regular';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }

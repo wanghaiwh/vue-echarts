@@ -1,4 +1,5 @@
 @import '~iview/src/styles/index.less';
+@import url('./flow.less');
 
 @primary-color: #75deef;
 
@@ -81,4 +82,130 @@
     border-bottom: 1px solid #1C5AB3;
     border-right: 1px solid #1C5AB3;
 
+}
+
+// 修改elementUI默认样式
+.search {
+ .el-icon-date:before {
+    position: relative;
+    left: 176px;
+    content: "\e790";
+    color: #1DB2FF;
+}
+ .el-input__inner {
+    font-family: SourceHanSansCN-Regular;
+    width: 212px;
+    border-radius: 0px 8px 0px 0;
+    background: #031F45;
+    border-color:  #0E4D7C;
+    font-size: 18px;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    color: #9DDDFF;
+}
+.el-input__inner:hover {
+    border-color:none
+}
+}
+// 
+.el-date-picker{
+    border-radius: 0 !important;
+    color: #9DDDFF !important;
+    border-color: #0E4D7C !important;
+    background-color: #031F45 !important;
+    top: 170px !important;
+    .el-date-picker__header {
+        margin: 0;
+    }
+    .el-date-table th,.el-date-picker__header-label {
+        padding: 0;
+        color: #9DDDFF !important;
+        border-color: #0E4D7C !important;
+    }
+    .el-icon-d-arrow-left:before,
+    .el-icon-arrow-left:before,
+    .el-icon-arrow-right:before,
+    .el-icon-d-arrow-right:before{
+        font-size: 14px;
+        color: #9DDDFF;
+    }
+}
+.today {
+    span {
+        background-color: #00E1EF !important;
+        color: #011632 !important;
+    }
+}
+.el-date-table td div {
+    height: 20px !important;
+}
+.el-date-table td.next-month, .el-date-table td.prev-month {
+    color: #ccc !important;
+}
+.el-picker-panel,.el-date-picker .el-picker-panel__content {
+    width: 212px !important;
+    height: 240px;
+    margin: 0;
+//     transform:scaleY (0.9);
+// -webkit-transform:scaleY(0.5);  /*兼容-webkit-引擎浏览器*/
+// -moz-transform:scaleY(0.5)
+}
+.el-select:hover,.el-date-editor--date:hover, .el-input__inner {
+    border-color: #0E4D7C!important;
+ }
+.popper__arrow {
+    display: none !important;
+}
+.el-select-dropdown {
+    border-radius: 0 !important;
+    border-color: #0E4D7C !important;
+    border-bottom: none !important;
+    top: 170px !important;
+    background-color: #031F45 !important;
+}
+.el-popper .popper__arrow::after {
+    border-style: none !important;
+}
+.el-select-dropdown__list {
+    background-color: #031F45 !important;
+    border-color: #0E4D7C !important;
+    padding: 0 !important;
+}
+.el-select-dropdown__item {
+    border-bottom: 1px solid #0E4D7C !important;
+    span {
+        font-size: 18px;
+        font-family: Source Han Sans CN;
+        font-weight: 400;
+        color: #9DDDFF;
+    }
+}
+.el-select .el-input .el-select__caret.el-input__icon::before {
+    content: "\e790";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    color: #1DB2FF;
+    transform: translate(-50%, -50%);
+  }
+  
+.el-select-dropdown__item.hover, .el-select-dropdown__item:hover {
+    background-color: #00E1EF !important;
+    span {
+        color: #011632;
+    }
+}
+// 下拉框添加勾选
+.el-select-dropdown__item{
+    width: 100%;
+    padding: 0 10px 0 15px !important;
+}
+.el-icon-check::before {
+    float: right;
+    color: #409EFF;
+    font-weight: 700;
+    margin-left: 10px;
+    
 }
